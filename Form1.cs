@@ -65,6 +65,7 @@ namespace Calculator
         {
             textBox_result.Text = "0";
             resultValue = 0;
+            labelOperations.Text = "";
         }
 
         private void btnClearEntry_Click(object sender, EventArgs e)
@@ -88,6 +89,17 @@ namespace Calculator
                 case "/":
                     textBox_result.Text = (resultValue / Double.Parse(textBox_result.Text)).ToString();
                     break;
+
+                case "^2":
+                    textBox_result.Text = Math.Pow(Double.Parse(textBox_result.Text), 2).ToString();
+                    break;
+                case "^y":
+                    textBox_result.Text = Math.Pow(resultValue,Double.Parse(textBox_result.Text)).ToString();
+                    break;
+                case "sqrt":
+                    textBox_result.Text = Math.Sqrt(Double.Parse(textBox_result.Text)).ToString();
+                    break;
+
                 default:
                     break;
 
@@ -95,6 +107,7 @@ namespace Calculator
             }
             resultValue = Double.Parse(textBox_result.Text);
             labelOperations.Text = " ";
+            
         }
     }
 }

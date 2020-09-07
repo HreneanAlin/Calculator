@@ -46,9 +46,12 @@
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.btnEqual = new System.Windows.Forms.Button();
             this.textBox_result = new System.Windows.Forms.TextBox();
             this.labelOperations = new System.Windows.Forms.Label();
+            this.btnEqual = new System.Windows.Forms.Button();
+            this.btnSquere = new System.Windows.Forms.Button();
+            this.btnPowerY = new System.Windows.Forms.Button();
+            this.btnSqrt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOne
@@ -185,7 +188,7 @@
             // btnClearEntry
             // 
             this.btnClearEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearEntry.Location = new System.Drawing.Point(216, 89);
+            this.btnClearEntry.Location = new System.Drawing.Point(267, 89);
             this.btnClearEntry.Name = "btnClearEntry";
             this.btnClearEntry.Size = new System.Drawing.Size(45, 45);
             this.btnClearEntry.TabIndex = 14;
@@ -196,7 +199,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(216, 140);
+            this.btnClear.Location = new System.Drawing.Point(267, 140);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(45, 45);
             this.btnClear.TabIndex = 13;
@@ -237,17 +240,6 @@
             this.btnZero.UseVisualStyleBackColor = true;
             this.btnZero.Click += new System.EventHandler(this.button_click);
             // 
-            // btnEqual
-            // 
-            this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqual.Location = new System.Drawing.Point(216, 191);
-            this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(45, 96);
-            this.btnEqual.TabIndex = 19;
-            this.btnEqual.Text = "=";
-            this.btnEqual.UseVisualStyleBackColor = true;
-            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
-            // 
             // textBox_result
             // 
             this.textBox_result.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -255,7 +247,7 @@
             this.textBox_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_result.Location = new System.Drawing.Point(12, 54);
             this.textBox_result.Name = "textBox_result";
-            this.textBox_result.Size = new System.Drawing.Size(249, 29);
+            this.textBox_result.Size = new System.Drawing.Size(300, 29);
             this.textBox_result.TabIndex = 20;
             this.textBox_result.Text = "0";
             this.textBox_result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -270,14 +262,61 @@
             this.labelOperations.Size = new System.Drawing.Size(0, 24);
             this.labelOperations.TabIndex = 21;
             // 
+            // btnEqual
+            // 
+            this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEqual.Location = new System.Drawing.Point(216, 242);
+            this.btnEqual.Name = "btnEqual";
+            this.btnEqual.Size = new System.Drawing.Size(96, 45);
+            this.btnEqual.TabIndex = 24;
+            this.btnEqual.Text = "=";
+            this.btnEqual.UseVisualStyleBackColor = true;
+            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
+            // 
+            // btnSquere
+            // 
+            this.btnSquere.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSquere.Location = new System.Drawing.Point(216, 89);
+            this.btnSquere.Name = "btnSquere";
+            this.btnSquere.Size = new System.Drawing.Size(45, 45);
+            this.btnSquere.TabIndex = 23;
+            this.btnSquere.Text = "^2";
+            this.btnSquere.UseVisualStyleBackColor = true;
+            this.btnSquere.Click += new System.EventHandler(this.operator_click);
+            // 
+            // btnPowerY
+            // 
+            this.btnPowerY.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPowerY.Location = new System.Drawing.Point(216, 140);
+            this.btnPowerY.Name = "btnPowerY";
+            this.btnPowerY.Size = new System.Drawing.Size(45, 45);
+            this.btnPowerY.TabIndex = 22;
+            this.btnPowerY.Text = "^y";
+            this.btnPowerY.UseVisualStyleBackColor = true;
+            this.btnPowerY.Click += new System.EventHandler(this.operator_click);
+            // 
+            // btnSqrt
+            // 
+            this.btnSqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqrt.Location = new System.Drawing.Point(216, 191);
+            this.btnSqrt.Name = "btnSqrt";
+            this.btnSqrt.Size = new System.Drawing.Size(94, 45);
+            this.btnSqrt.TabIndex = 25;
+            this.btnSqrt.Text = "sqrt";
+            this.btnSqrt.UseVisualStyleBackColor = true;
+            this.btnSqrt.Click += new System.EventHandler(this.operator_click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 301);
+            this.ClientSize = new System.Drawing.Size(322, 301);
+            this.Controls.Add(this.btnSqrt);
+            this.Controls.Add(this.btnEqual);
+            this.Controls.Add(this.btnSquere);
+            this.Controls.Add(this.btnPowerY);
             this.Controls.Add(this.labelOperations);
             this.Controls.Add(this.textBox_result);
-            this.Controls.Add(this.btnEqual);
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.btnPoint);
             this.Controls.Add(this.btnZero);
@@ -325,9 +364,12 @@
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btnPoint;
         private System.Windows.Forms.Button btnZero;
-        private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.TextBox textBox_result;
         private System.Windows.Forms.Label labelOperations;
+        private System.Windows.Forms.Button btnEqual;
+        private System.Windows.Forms.Button btnSquere;
+        private System.Windows.Forms.Button btnPowerY;
+        private System.Windows.Forms.Button btnSqrt;
     }
 }
 
